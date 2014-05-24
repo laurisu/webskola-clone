@@ -28,7 +28,6 @@ $app->get('/', function () use ($app) {
 /*
  * Text Page
  */
-
 $app->get('/info', function () use ($app) {
     require_once '../controller/TextPageController.php';
     $app->render('base.html.twig');
@@ -37,7 +36,6 @@ $app->get('/info', function () use ($app) {
 /* 
  * BLOG
  */
-
 $app->get('/blog', function() use ($app) {
     require_once '../controller/BlogController.php';
     
@@ -49,5 +47,13 @@ $app->get('/blog', function() use ($app) {
         'blogs' => $blogs
     ));
 })->name('blog');
+
+/* 
+ * PROGRAMMAS
+ */
+$app->get('/study', function () use ($app) {
+    require_once '../controller/ProgrammasController.php';
+    $app->render('base.html.twig');
+})->name('study');
 
 $app->run();
