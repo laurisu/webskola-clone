@@ -21,7 +21,7 @@ $view->parserExtensions = array(
 
 // ROUTES
 $app->get('/', function () use ($app) {
-    require_once '../controller/indexController.php';
+    require_once '../controller/IndexController.php';
     $app->render('base.html.twig');
 })->name('home');
 
@@ -29,5 +29,20 @@ $app->get('/study', function () use ($app) {
     require_once '../controller/ProgrammasController.php';
     $app->render('base.html.twig');
 })->name('study');
+/* 
+ * BLOG
+ */
+
+$app->get('/blog', function() use ($app) {
+    require_once '../controller/BlogController.php';
+    
+    $blogControler = new BlogControler();
+    $blogs = $blogControler->indexAction();
+    var_dump($blogs);
+    
+    $app->render('base.html.twig', array(
+        'blogs' => $blogs
+    ));
+})->name('blog');
 
 $app->run();
