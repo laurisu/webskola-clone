@@ -1,8 +1,7 @@
 <?php
 
 require '../vendor/autoload.php';
-require_once '../vendor/j4mie/idiorm/idiorm.php';
-require_once '../vendor/j4mie/paris/paris.php';
+require_once '../config/config.php';
 
 // SLIM Framework
 $app = new \Slim\Slim(array(

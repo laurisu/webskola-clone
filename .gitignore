@@ -5,6 +5,7 @@ vendor/*
 
 # Configuration files
 nbproject/*
+config/config.php
 
 # Composer
 composer.phar
