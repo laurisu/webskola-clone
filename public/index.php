@@ -25,4 +25,13 @@ $app->get('/', function () use ($app) {
     $app->render('base.html.twig');
 })->name('home');
 
+/*
+ * Text Page
+ */
+
+$app->get('/info', function () use ($app) {
+    require_once '../controller/TextPageController.php';
+    $app->render('base.html.twig');
+})->name('textpage');
+
 $app->run();
