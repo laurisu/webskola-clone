@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Webpage</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block pageTitle %}{% endblock %}</title>
+        <script>
+            less = {
+                env: "development"
+            };
+        </script>
+        <link rel="stylesheet/less" type="text/css" href="/css/init.less" />
+        <script src="/js/less-1.7.0.min.js" type="text/javascript"></script>
     </head>
     <body>
         <ul id="navigation">
-        {% for item in navigation %}
-            <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
-        {% endfor %}
+            {% for item in navigation %}
+                <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+                {% endfor %}
         </ul>
 
-        <h1>My Webpage</h1>
-        {{ a_variable }}
+        <div class="well"><h1>My Webpage</h1>
+            {{ a_variable }}
+        </div>
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="/js/jquery-1.11.1.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
     </body>
 </html>{# empty Twig template #}
