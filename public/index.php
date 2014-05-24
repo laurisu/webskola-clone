@@ -30,7 +30,14 @@ $app->get('/', function () use ($app) {
  */
 $app->get('/info', function () use ($app) {
     require_once '../controller/TextPageController.php';
-    $app->render('base.html.twig');
+    
+    $textPageController = new TextPageController();
+    $textPage = $textPageController->indexAction();
+    var_dump($textPage);
+    
+        $app->render('base.html.twig', array(
+        'textpage' => $textPage
+    ));
 })->name('textpage');
 
 /* 
