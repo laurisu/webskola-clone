@@ -11,8 +11,8 @@ require_once '../model/ProgrammasModel.php';
 class ProgrammasController
 {
     public function indexAction() {
-        $blogs = Model::factory("Programmas") -> find_many();
+        $programmas = Model::factory("Programmas") -> find_many();
         
-        return $blogs; /* vienmers pirms return tukshu rindu*/       
+        return $programmas; /* vienmers pirms return tukshu rindu*/       
     }
 }
