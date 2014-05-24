@@ -54,6 +54,14 @@ $app->get('/blog', function() use ($app) {
 $app->get('/study', function () use ($app) {
     require_once '../controller/ProgrammasController.php';
     $app->render('base.html.twig');
+     
+    $programmasControler = new ProgrammasControler();
+    $programmas = $programmasControler->indexAction();
+    var_dump($programmas);
+    
+    $app->render('base.html.twig', array(
+        'programmas' => $programmas
+    ));
 })->name('study');
 
 $app->run();
