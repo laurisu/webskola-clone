@@ -15,16 +15,13 @@
         <script src="/js/less-1.7.0.min.js" type="text/javascript"></script>
     </head>
     <body>
+        
+        {% block main_menu %}
+            {% include 'components/menu.html.twig' %}
+        {% endblock %}
+        
         {% block content %}
-            <ul id="navigation">
-                {% for item in navigation %}
-                    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
-                    {% endfor %}
-            </ul>
 
-            <div class="well"><h1>My Webpage</h1>
-                {{ a_variable }}
-            </div>
         {% endblock %}
 
         {% block scripts %}
