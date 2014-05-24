@@ -25,4 +25,9 @@ $app->get('/', function () use ($app) {
     $app->render('base.html.twig');
 })->name('home');
 
+$app->get('/study', function () use ($app) {
+    require_once '../controller/ProgrammasController.php';
+    $app->render('base.html.twig');
+})->name('study');
+
 $app->run();
