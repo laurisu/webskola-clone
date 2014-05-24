@@ -22,6 +22,7 @@ $view->parserExtensions = array(
 
 // ROUTES
 $app->get('/', function () use ($app) {
+    require_once '../controller/indexController.php';
     $app->render('base.html.twig');
 })->name('home');
 
