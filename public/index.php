@@ -22,7 +22,9 @@ $view->parserExtensions = array(
 // ROUTES
 $app->get('/', function () use ($app) {
     
-    $app->render('base.html.twig');
+    $app->render('base.html.twig', array(
+        'active'=>'home'
+    ));
 })->name('home');
 
 /*
@@ -36,7 +38,8 @@ $app->get('/info', function () use ($app) {
     var_dump($textPage);
     
         $app->render('base.html.twig', array(
-        'textpage' => $textPage
+            'textpage' => $textPage,
+            'active' => 'textpage'
     ));
 })->name('textpage');
 
@@ -51,7 +54,8 @@ $app->get('/blog', function() use ($app) {
     var_dump($blogs);
     
     $app->render('base.html.twig', array(
-        'blogs' => $blogs
+        'blogs' => $blogs,
+        'active' => 'blog'
     ));
 })->name('blog');
 
@@ -65,8 +69,9 @@ $app->get('/study', function () use ($app) {
     $programmas = $programmasController->indexAction();
     var_dump($programmas);
     
-    $app->render('base.html.twig', array(
-        'programmas' => $programmas
+    $app->render('pages/programmas.html.twig', array(
+        'programmas' => $programmas,
+        'active' => 'study'
     ));
 })->name('study');
 

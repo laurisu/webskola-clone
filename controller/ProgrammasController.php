@@ -13,6 +13,6 @@ class ProgrammasController
     public function indexAction() {
         $programmas = Model::factory("Programmas") -> find_many();
         
-        return $programmas; /* vienmers pirms return tukshu rindu*/       
+        return $programmas; /* vienmer pirms return atsat tukshu rindu */       
     }
 }
