@@ -9,3 +9,5 @@ config/config.php
 
 # Composer
 composer.phar
+
+*~
