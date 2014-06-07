@@ -5,9 +5,10 @@ vendor/*
 
 # Configuration files
 nbproject/*
-config/config.php
+/config/config.php
 
 # Composer
 composer.phar
 
 *~
+
