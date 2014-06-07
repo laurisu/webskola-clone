@@ -50,14 +50,27 @@ $app->get('/blog', function() use ($app) {
     require_once '../controller/BlogController.php';
     
     $blogControler = new BlogControler();
-    $blogs = $blogControler->indexAction();
+    $blogs = $blogControler->listAction();
     
     
-    $app->render('pages/blog.html.twig', array(
+    $app->render('pages/blogList.html.twig', array(
         'blogs' => $blogs,
         'active' => 'blog'
     ));
 })->name('blog');
+
+$app->get('/blog/:slug', function($slug) use ($app) {
+    require_once '../controller/BlogController.php';
+    
+    $blogControler = new BlogControler();
+    $blogs = $blogControler->indexAction($slug);
+    
+    
+    $app->render('pages/blogList.html.twig', array(
+        'blogs' => $blogs,
+        'active' => 'blog'
+    ));
+})->name('blog-post');
 
 /* 
  * PROGRAMMAS
