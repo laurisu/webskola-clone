@@ -30,15 +30,15 @@ $app->get('/', function () use ($app) {
 /*
  * Text Page
  */
-$app->get('/info', function () use ($app) {
+$app->get('/info/:slug', function ($slug) use ($app) {
     require_once '../controller/TextPageController.php';
     
     $textPageController = new TextPageController();
-    $textPage = $textPageController->indexAction();
-    var_dump($textPage);
+    $textPage = $textPageController->indexAction($slug);
+//    var_dump($textPage);
     
-        $app->render('base.html.twig', array(
-            'textpage' => $textPage,
+        $app->render('pages/textpage.html.twig', array(
+            'text_page' => $textPage,
             'active' => 'textpage'
     ));
 })->name('textpage');
@@ -51,9 +51,9 @@ $app->get('/blog', function() use ($app) {
     
     $blogControler = new BlogControler();
     $blogs = $blogControler->indexAction();
-    var_dump($blogs);
     
-    $app->render('base.html.twig', array(
+    
+    $app->render('pages/blog.html.twig', array(
         'blogs' => $blogs,
         'active' => 'blog'
     ));
