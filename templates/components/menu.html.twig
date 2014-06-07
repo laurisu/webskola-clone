@@ -1,6 +1,6 @@
 {% block main_menu %}
 
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-default navbar-fixed-top my-navbar" role="navigation">
         <div class="container my-main-menu">
             <div class="col-md-10 col-md-offset-1">
             <div class="navbar-header">
@@ -17,12 +17,12 @@
                     <li{% if active == 'study' %} class="active"{% endif %}><a href="{{urlFor('study')}}">Programmas</a></li>
                     <li{% if active == 'blog' %} class="active"{% endif %}><a href="{{urlFor('blog')}}">Blogs</a></li>
                     <li{% if active == 'textpage' %} class="active"{% endif %}><a href="{{urlFor('textpage', {slug:'par-lapu'})}}">Par skolu</a></li>
-                    <li><a href="#">Partneri</a></li>
-                    <li><a href="#">Kontakti</a></li>
+                    <li><a  href="{{urlFor('textpage', {slug:'partneri'})}}">Partneri</a></li>
+                    <li><a href="{{urlFor('textpage', {slug:'kontakti'})}}">Kontakti</a></li>
+                    <li><a href="#">Lang</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
             </div>
         </div>
     </div> 
-
 {% endblock %}

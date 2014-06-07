@@ -51,9 +51,9 @@ $app->get('/blog', function() use ($app) {
     
     $blogControler = new BlogControler();
     $blogs = $blogControler->indexAction();
-    var_dump($blogs);
     
-    $app->render('base.html.twig', array(
+    
+    $app->render('pages/blog.html.twig', array(
         'blogs' => $blogs,
         'active' => 'blog'
     ));
@@ -67,7 +67,7 @@ $app->get('/study', function () use ($app) {
      
     $programmasController = new ProgrammasController();
     $programmas = $programmasController->indexAction();
-    var_dump($programmas);
+    /* var_dump($programmas); */
     
     $app->render('pages/programmas.html.twig', array(
         'programmas' => $programmas,
