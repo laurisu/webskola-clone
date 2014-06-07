@@ -44,6 +44,11 @@ body {
 
 /* ========== PROGRAMMAS SECTION STYLES ========== */
 
+.my-container {
+    margin:0;
+    width:100%;
+}
+
 /* MOVING IMG */
 #outer_container, #imagePan {
     height: 414px;
@@ -77,17 +82,6 @@ body {
         font-family: noto serif web, serif;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     }
-    ul {
-        display: inline-block;
-        width:700px;
-        height:50px;
-        background: white;
-        li {
-            display:inline-block;
-            margin: 0 20px;
-        }
-    }
-    height: 70px
 }
 
 /* ========== MAIN MENU ========== */
@@ -192,3 +186,132 @@ body {
     position: relative;
     text-align: center
 }
+/* font-face */
+
+@font-face {
+  font-family: entypo web;
+  font-style: normal;
+  font-weight: normal;
+  src: url(../assets/entypo_draugiem.eot);
+  src: url(../assets/entypo_draugiem.eot?iefix) format("embedded-opentype"), url(../assets/entypo_draugiem.ttf) format("truetype"), url(../assets/entypo_draugiem.woff) format("woff"), url(../assets/entypo_draugiem.svg#entypo_draugiem) format("svg"); }
+@font-face {
+  font-family: noto serif web;
+  font-style: normal;
+  font-weight: normal;
+  src: url(../assets/noto_serif-regular.eot);
+  src: url(../assets/noto_serif-regular.eot?iefix) format("embedded-opentype"), url(../assets/noto_serif-regular.ttf) format("truetype"), url(../assets/noto_serif-regular.woff) format("woff"), url(../assets/noto_serif-regular.svg#noto_serif-regular) format("svg"); }
+@font-face {
+  font-family: noto serif web;
+  font-style: normal;
+  font-weight: bold;
+  src: url(../assets/noto_serif-bold.eot);
+  src: url(../assets/noto_serif-bold.eot?iefix) format("embedded-opentype"), url(../fonts/noto_serif-bold/noto_serif-bold.ttf) format("truetype"), url(../fonts/noto_serif-bold/noto_serif-bold.woff) format("woff"), url(../fonts/noto_serif-bold/noto_serif-bold.svg#noto_serif-bold) format("svg"); }
+@font-face {
+  font-family: noto serif web;
+  font-style: italic;
+  font-weight: normal;
+  src: url(../assets/noto_serif-italic.eot);
+  src: url(../assets/noto_serif-italic.eot?iefix) format("embedded-opentype"), url(../fonts/noto_serif-italic/noto_serif-italic.ttf) format("truetype"), url(../fonts/noto_serif-italic/noto_serif-italic.woff) format("woff"), url(../fonts/noto_serif-italic/noto_serif-italic.svg#noto_serif-italic) format("svg"); }
+@font-face {
+  font-family: noto serif web;
+  font-style: italic;
+  font-weight: bold;
+  src: url(../assets/noto_serif-bolditalic.eot);
+  src: url(../assets/noto_serif-bolditalic.eot?iefix) format("embedded-opentype"), url(../fonts/noto_serif-bolditalic/noto_serif-bolditalic.ttf) format("truetype"), url(../fonts/noto_serif-bolditalic/noto_serif-bolditalic.woff) format("woff"), url(../fonts/noto_serif-bolditalic/noto_serif-bolditalic.svg#noto_serif-bolditalic) format("svg"); }
+@font-face {
+  font-family: pt serif web;
+  font-style: normal;
+  font-weight: normal;
+  src: url(../assets/pt_serif-regular.eot);
+  src: url(../assets/pt_serif-regular.eot?iefix) format("embedded-opentype"), url(../fonts/pt_serif-regular/pt_serif-regular.ttf) format("truetype"), url(../fonts/pt_serif-regular/pt_serif-regular.woff) format("woff"), url(../fonts/pt_serif-regular/pt_serif-regular.svg#pt_serif-regular) format("svg"); }
+@font-face {
+  font-family: pt serif web;
+  font-style: normal;
+  font-weight: bold;
+  src: url(../assets/pt_serif-bold.eot);
+  src: url(../assets/pt_serif-bold.eot?iefix) format("embedded-opentype"), url(../fonts/pt_serif-bold/pt_serif-bold.ttf) format("truetype"), url(../fonts/pt_serif-bold/pt_serif-bold.woff) format("woff"), url(../fonts/pt_serif-bold/pt_serif-bold.svg#pt_serif-bold) format("svg"); }
+@font-face {
+  font-family: pt serif web;
+  font-style: italic;
+  font-weight: normal;
+  src: url(../assets/pt_serif-italic.eot);
+  src: url(../assets/pt_serif-italic.eot?iefix) format("embedded-opentype"), url(../fonts/pt_serif-italic/pt_serif-italic.ttf) format("truetype"), url(../fonts/pt_serif-italic/pt_serif-italic.woff) format("woff"), url(../fonts/pt_serif-italic/pt_serif-italic.svg#pt_serif-italic) format("svg"); }
+@font-face {
+  font-family: pt serif web;
+  font-style: italic;
+  font-weight: bold;
+  src: url(../assets/pt_serif-bolditalic.eot);
+  src: url(../assets/pt_serif-bolditalic.eot?iefix) format("embedded-opentype"), url(../fonts/pt_serif-bolditalic/pt_serif-bolditalic.ttf) format("truetype"), url(../fonts/pt_serif-bolditalic/pt_serif-bolditalic.woff) format("woff"), url(../fonts/pt_serif-bolditalic/pt_serif-bolditalic.svg#pt_serif-bolditalic) format("svg"); }
+@font-face {
+  font-family: ubuntu web;
+  font-style: normal;
+  font-weight: normal;
+  src: url(../assets/ubuntu-regular.eot);
+  src: url(../assets/ubuntu-regular.eot?iefix) format("embedded-opentype"), url(../fonts/ubuntu-regular/ubuntu-regular.ttf) format("truetype"), url(../fonts/ubuntu-regular/ubuntu-regular.woff) format("woff"), url(../fonts/ubuntu-regular/ubuntu-regular.svg#ubuntu-regular) format("svg"); }
+@font-face {
+  font-family: ubuntu web;
+  font-style: normal;
+  font-weight: bold;
+  src: url(../assets/ubuntu-bold.eot);
+  src: url(../assets/ubuntu-bold.eot?iefix) format("embedded-opentype"), url(../fonts/ubuntu-bold/ubuntu-bold.ttf) format("truetype"), url(../fonts/ubuntu-bold/ubuntu-bold.woff) format("woff"), url(../fonts/ubuntu-bold/ubuntu-bold.svg#ubuntu-bold) format("svg"); }
+@font-face {
+  font-family: ubuntu web;
+  font-style: italic;
+  font-weight: normal;
+  src: url(../assets/ubuntu-italic.eot);
+  src: url(../assets/ubuntu-italic.eot?iefix) format("embedded-opentype"), url(../fonts/ubuntu-italic/ubuntu-italic.ttf) format("truetype"), url(../fonts/ubuntu-italic/ubuntu-italic.woff) format("woff"), url(../fonts/ubuntu-italic/ubuntu-italic.svg#ubuntu-italic) format("svg"); }
+@font-face {
+  font-family: ubuntu web;
+  font-style: italic;
+  font-weight: bold;
+  src: url(../assets/ubuntu-bolditalic.eot);
+  src: url(../assets/ubuntu-bolditalic.eot?iefix) format("embedded-opentype"), url(../fonts/ubuntu-bolditalic/ubuntu-bolditalic.ttf) format("truetype"), url(../fonts/ubuntu-bolditalic/ubuntu-bolditalic.woff) format("woff"), url(../fonts/ubuntu-bolditalic/ubuntu-bolditalic.svg#ubuntu-bolditalic) format("svg"); }
+@font-face {
+  font-family: ubuntu web;
+  font-style: normal;
+  font-weight: 100;
+  src: url(../assets/ubuntu-light.eot);
+  src: url(../assets/ubuntu-light.eot?iefix) format("embedded-opentype"), url(../fonts/ubuntu-light/ubuntu-light.ttf) format("truetype"), url(../fonts/ubuntu-light/ubuntu-light.woff) format("woff"), url(../fonts/ubuntu-light/ubuntu-light.svg#ubuntu-light) format("svg"); }
+@font-face {
+  font-family: ubuntu web;
+  font-style: italic;
+  font-weight: 100;
+  src: url(../assets/ubuntu-lightitalic.eot);
+  src: url(../assets/ubuntu-lightitalic.eot?iefix) format("embedded-opentype"), url(../fonts/ubuntu-lightitalic/ubuntu-lightitalic.ttf) format("truetype"), url(../fonts/ubuntu-lightitalic/ubuntu-lightitalic.woff) format("woff"), url(../fonts/ubuntu-lightitalic/ubuntu-lightitalic.svg#ubuntu-lightitalic) format("svg"); }
+@font-face {
+  font-family: ubuntu web;
+  font-style: normal;
+  font-weight: 500;
+  src: url(../assets/ubuntu-medium.eot);
+  src: url(../assets/ubuntu-medium.eot?iefix) format("embedded-opentype"), url(../fonts/ubuntu-medium/ubuntu-medium.ttf) format("truetype"), url(../fonts/ubuntu-medium/ubuntu-medium.woff) format("woff"), url(../fonts/ubuntu-medium/ubuntu-medium.svg#ubuntu-medium) format("svg"); }
+@font-face {
+  font-family: ubuntu web;
+  font-style: italic;
+  font-weight: 500;
+  src: url(../assets/ubuntu-mediumitalic.eot);
+  src: url(../assets/ubuntu-mediumitalic.eot?iefix) format("embedded-opentype"), url(../fonts/ubuntu-mediumitalic/ubuntu-mediumitalic.ttf) format("truetype"), url(../fonts/ubuntu-mediumitalic/ubuntu-mediumitalic.woff) format("woff"), url(../fonts/ubuntu-mediumitalic/ubuntu-mediumitalic.svg#ubuntu-mediumitalic) format("svg"); }
+@font-face {
+  font-family: ubuntu condensed web;
+  font-style: normal;
+  font-weight: normal;
+  src: url(../assets/ubuntu_condensed-regular.eot);
+  src: url(../assets/ubuntu_condensed-regular.eot?iefix) format("embedded-opentype"), url(../fonts/ubuntu_condensed-regular/ubuntu_condensed-regular.ttf) format("truetype"), url(../fonts/ubuntu_condensed-regular/ubuntu_condensed-regular.woff) format("woff"), url(../fonts/ubuntu_condensed-regular/ubuntu_condensed-regular.svg#ubuntu_condensed-regular) format("svg"); }
+@font-face {
+  font-family: exo web;
+  font-style: normal;
+  font-weight: 100;
+  src: url(../assets/exo2-thin.eot);
+  src: url(../assets/exo2-thin.eot?iefix) format("embedded-opentype"), url(../fonts/exo2-thin/exo2-thin.ttf) format("truetype"), url(../fonts/exo2-thin/exo2-thin.woff) format("woff"), url(../fonts/exo2-thin/exo2-thin.svg#exo2-thin) format("svg"); }
+@font-face {
+  font-family: francois one;
+  font-style: normal;
+  font-weight: normal;
+  src: url(../assets/francoisone.eot);
+  src: url(../assets/francoisone.eot?iefix) format("embedded-opentype"), url(../fonts/francoisone/francoisone.ttf) format("truetype"), url(../fonts/francoisone/francoisone.woff) format("woff"), url(../fonts/francoisone/francoisone.svg#francoisone) format("svg"); }
+@font-face {
+  font-family: scada;
+  font-style: normal;
+  font-weight: bold;
+  src: url(../assets/scada-bold.eot);
+  src: url(../assets/scada-bold.eot?iefix) format("embedded-opentype"), url(../fonts/scada-bold/scada-bold.ttf) format("truetype"), url(../fonts/scada-bold/scada-bold.woff) format("woff"), url(../fonts/scada-bold/scada-bold.svg#scada-bold) format("svg"); }
+/* Ha(Fu)ck normalize! */

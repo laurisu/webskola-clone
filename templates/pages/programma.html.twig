@@ -1,0 +1,50 @@
+{% extends "base.html.twig" %}
+
+{% block pageTitle %}{{ programma.program_type }}{% endblock %}
+
+{% block content %}
+    
+    <div class="container my-container">
+        <div class="row">
+
+            <div id="outer_container" class="my-header">
+                <div id="imagePan">
+                    <div class="container">
+                        <div><img src="/img/programmas_background.jpg" class="panning"></div>
+                    </div>
+                        <div class="yeah">
+                            <br>
+                            <h1>{{ programma.name }}</h1>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default"><a href="#pk">Profesionālā kvalifikācija</a></button>
+                                <button type="button" class="btn btn-default"><a href="#d">Datorgrafika</a></button>
+                                <button type="button" class="btn btn-default"><a href="#dui">Dizains un ilustrācija</a></button>
+                                <button type="button" class="btn btn-default"><a href="#p">Programmēšana</a></button>
+                            </div> 
+                        </div>  
+                </div>
+            </div>   
+
+
+         
+            <div class="col-md-12">
+                
+                <p id="pk">
+                {{ programma.short_descr }}</p>
+                <p id="d">
+               {{ programma.long_descr }}</p>
+                <p id="dui">
+               {{ programma.short_descr }}</p>
+                <p id="p">
+               {{ programma.grounding }}</p>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}

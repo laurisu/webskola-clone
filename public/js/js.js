@@ -48,7 +48,7 @@ $(window).load(function() {
         var thePosD=destY-mouseCoordsY;
         var marginL=$imagePan_panning.css("marginLeft").replace("px", "");
         var marginT=$imagePan_panning.css("marginTop").replace("px", "");
-        var animSpeed=500; //ease amount
+        var animSpeed=1000; //ease amount
         var easeType="easeOutCirc";
         if(mouseCoordsX>destX || mouseCoordsY>destY){
             //$imagePan_container.css("left",-thePosA-marginL); $imagePan_container.css("top",-thePosC-marginT); //without easing

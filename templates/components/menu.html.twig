@@ -14,7 +14,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li{% if active == 'study' %} class="active"{% endif %}><a href="{{urlFor('study')}}">Programmas</a></li>
+                    <li{% if active == 'study-list' %} class="active"{% endif %}><a href="{{urlFor('study-list')}}">Programmas</a></li>
                     <li{% if active == 'blog' %} class="active"{% endif %}><a href="{{urlFor('blog')}}">Blogs</a></li>
                     <li{% if active == 'textpage' %} class="active"{% endif %}><a href="{{urlFor('textpage', {slug:'par-lapu'})}}">Par skolu</a></li>
                     <li><a href="{{urlFor('textpage', {slug:'partneri'})}}">Partneri</a></li>
