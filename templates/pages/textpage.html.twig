@@ -1,0 +1,7 @@
+{% extends "base.html.twig" %}
+
+{% block pageTitle %}{{ text_page.title }}{% endblock %}
+
+{% block content %}
+    {{ text_page.content | raw }}
+{% endblock %}
