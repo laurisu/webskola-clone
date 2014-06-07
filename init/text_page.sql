@@ -12,3 +12,4 @@ CREATE TABLE IF NOT EXISTS `text_page` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
+ALTER TABLE `text_page` ADD `slug` VARCHAR(50) NULL , ADD UNIQUE (`slug`) ;
