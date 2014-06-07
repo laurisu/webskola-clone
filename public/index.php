@@ -67,7 +67,7 @@ $app->get('/study', function () use ($app) {
      
     $programmasController = new ProgrammasController();
     $programmas = $programmasController->indexAction();
-    var_dump($programmas);
+    /* var_dump($programmas); */
     
     $app->render('pages/programmas.html.twig', array(
         'programmas' => $programmas,
