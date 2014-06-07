@@ -17,8 +17,8 @@
                     <li{% if active == 'study' %} class="active"{% endif %}><a href="{{urlFor('study')}}">Programmas</a></li>
                     <li{% if active == 'blog' %} class="active"{% endif %}><a href="{{urlFor('blog')}}">Blogs</a></li>
                     <li{% if active == 'textpage' %} class="active"{% endif %}><a href="{{urlFor('textpage', {slug:'par-lapu'})}}">Par skolu</a></li>
-                    <li><a href="#">Partneri</a></li>
-                    <li><a href="#">Kontakti</a></li>
+                    <li><a  href="{{urlFor('textpage', {slug:'partneri'})}}">Partneri</a></li>
+                    <li><a href="{{urlFor('textpage', {slug:'kontakti'})}}">Kontakti</a></li>
                     <li><a href="#">Lang</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
