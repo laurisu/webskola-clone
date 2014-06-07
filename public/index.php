@@ -51,9 +51,9 @@ $app->get('/blog', function() use ($app) {
     
     $blogControler = new BlogControler();
     $blogs = $blogControler->indexAction();
-    var_dump($blogs);
     
-    $app->render('base.html.twig', array(
+    
+    $app->render('pages/blog.html.twig', array(
         'blogs' => $blogs,
         'active' => 'blog'
     ));
