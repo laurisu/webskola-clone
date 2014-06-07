@@ -62,17 +62,27 @@ $app->get('/blog', function() use ($app) {
 /* 
  * PROGRAMMAS
  */
-$app->get('/study', function () use ($app) {
+$app->get('/study/:slug', function ($slug) use ($app) {
     require_once '../controller/ProgrammasController.php';
-     
     $programmasController = new ProgrammasController();
-    $programmas = $programmasController->indexAction();
-    /* var_dump($programmas); */
+    $programma = $programmasController->indexAction($slug);
     
-    $app->render('pages/programmas.html.twig', array(
-        'programmas' => $programmas,
+    $app->render('pages/programma.html.twig', array(
+        'programma' => $programma,
         'active' => 'study'
     ));
 })->name('study');
+
+
+$app->get('/study/', function () use ($app) {
+    require_once '../controller/ProgrammasController.php';
+    $programmasController = new ProgrammasController();
+    $programmas = $programmasController->listAction();
+    
+    $app->render('pages/programmas.html.twig', array(
+        'programmas' => $programmas,
+        'active' => 'study-list'
+    ));
+})->name('study-list');
 
 $app->run();

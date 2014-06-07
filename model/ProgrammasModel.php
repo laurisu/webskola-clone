@@ -4,7 +4,7 @@
  * External warrior owns this
  */
 
-Class Blog extends Model 
+Class Programmas extends Model 
 {
 
     
