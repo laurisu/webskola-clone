@@ -22,7 +22,7 @@ $view->parserExtensions = array(
 // ROUTES
 $app->get('/', function () use ($app) {
     
-    $app->render('base.html.twig', array(
+    $app->render('pages/index.html.twig', array(
         'active'=>'home'
     ));
 })->name('home');
