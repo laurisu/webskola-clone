@@ -86,10 +86,88 @@ body {
 
 /* ========== MAIN MENU ========== */
 
-my-footer {
+.my-sticky-footer {
 
 }
+.my-social-links-container {
+    background: #dedec5;
+}
+.my-social-links {
+    text-align: center;
 
+    .nav-pills {
+        display: inline-block;
+
+        > li {
+            margin: 20px 0;
+
+            // Links rendered as pills
+            > a {
+                width: 100px;
+                height: 100px;
+                line-height: 85px;
+                border-radius: 50%;
+                color: #959585;
+                font-size: 36px;
+                font-family: fontAwesome;
+                text-align: center;
+            }
+            + li {
+                margin-left: 2px;
+            }
+        }
+    }
+}
+
+.my-footer-menu-container {
+    background: #959585;
+    text-align: center;
+}
+.my-copyrigt {
+    font-size: 18px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #fff;
+}
+.my-footer-border-line {
+    border-top: 1px solid #adad9e;
+}                        
+.my-footer-menu {
+    .nav-pills {
+        display: inline-block;
+
+        > li {
+            // Links rendered as pills
+            > a {
+                padding: 20px 25px;
+                width: 130px;
+                border-radius: 0;
+                color: #dedec8;
+                font-size: @main-menu-font-size;
+                font-family: @font-family-ubuntu;
+                text-align: center;
+            }
+            + li {
+                margin-left: 2px;
+            }
+        }
+    }
+}
+.my-social-links,
+.my-footer-menu {
+    .nav {
+        > li {
+            > a {
+                &:hover,
+                    &:focus {
+                    color: #fff;
+                    text-decoration: none;
+                    background-color: #A5A595;
+                }
+            }
+        }
+    }
+}
 /* font-face */
 
 @font-face {

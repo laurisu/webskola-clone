@@ -1,10 +1,9 @@
 {% extends "base.html.twig" %}
 
-{% block pageTitle %}sdf{% endblock %}
+{% block pageTitle %}Programmas{% endblock %}
 
 {% block content %}
-    
-    <div class="container my-container">
+    <div class="container-fluid">
         <div class="row">
             
             <div id="outer_container" class="my-header">
@@ -12,18 +11,18 @@
                     <div class="container">
                         <div><img src="/img/programmas_background.jpg" class="panning"></div>
                     </div>
-                        <div class="yeah">
-                            <br>
-                            <h1>{{ programma.name }}</h1>
-                            <div class="btn-group">
-                                {% for programma in programmas %}
-                                <button type="button" class="btn btn-default"><a href="#pk">{{programma.program_type}}</a></button>
-                                
-                            {% endfor %}
-                                </div> 
-                        </div>  
-                    </div>
-                </div>   
+                    <div class="yeah">
+                        <br>
+                        <h1>{{ programma.name }}</h1>
+                        <div class="btn-group">
+                            {% for programma in programmas %}
+                            <button type="button" class="btn btn-default"><a href="#pk">{{programma.program_type}}</a></button>
+
+                        {% endfor %}
+                            </div> 
+                    </div>  
+                </div>
+            </div>   
                             
                             
             <div class="col-md-12">
@@ -36,9 +35,4 @@
             </div>
         </div>
     </div>
-
-
-
-
-
 {% endblock %}
