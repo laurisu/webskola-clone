@@ -1,21 +1,41 @@
 {% block footer %}
-    
-    <div class="container my-sticky-footer">
-        <div class="my-social-lnks">
-            <div class="">
+
+    <div class="my-sticky-footer">
+
+        <div class="my-social-links-container">
+            <div class="container my-social-links">
                 <ul class="nav nav-pills">
-                    <li><a href="#"><i class="fa fa-camera-retro"></i></a></li>
-                    <li><a href="#">tw</a></li>
-                    <li><a href="#">f</a></li>
-                    <li><a href="#">g+</a></li>
-                    <li><a href="#">in</a></li>
+                    <li><a href="#">&#xf167;</a></li>
+                    <li><a href="#">&#xf099;</a></li>
+                    <li><a href="#">&#xf09a;</a></li>
+                    <li><a href="#">&#xf0d5;</a></li>
+                    <li><a href="#">&#xf0e1;</a></li>
                 </ul>
             </div>
         </div>
-        <div class="">
-            <div class=""></div>
-            <div class=""></div>
+
+        <div class="my-footer-menu-container">
+            <div class="container my-copyrigt">
+                <p>
+                    <strong>&copy; Webskola</strong>
+                </p>
+                <p>
+                    Profesionāla izglītība web tehnoloģiju un dizaina jomā.
+                </p>
+            </div>
+            <div class="container my-footer-menu">
+                <div class="col-md-10 col-md-offset-1 my-footer-border-line">
+                    <ul class="nav nav-pills">
+                        <li><a href="{{urlFor('study')}}">Programmas</a></li>
+                        <li><a href="{{urlFor('blog')}}">Blogs</a></li>
+                        <li><a href="{{urlFor('textpage', {slug:'par-lapu'})}}">Par skolu</a></li>
+                        <li><a href="#">Partneri</a></li>
+                        <li><a href="#">Kontakti</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
+
     </div>
-    
+
 {% endblock %}
