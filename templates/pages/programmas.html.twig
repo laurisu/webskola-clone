@@ -13,12 +13,21 @@
                     </div>
                     <div class="yeah">
                         <br>
-                        <h1>{{ programma.name }}</h1>
+                        <h1>Programmas</h1>
                         <div class="btn-group">
+                            {% set newArray = [] %}
                             {% for programma in programmas %}
-                            <button type="button" class="btn btn-default"><a href="#pk">{{programma.program_type}}</a></button>
+                                {% if programma.program_type not in newArray %}
+                                    <button type="button" class="btn btn-default"><a href="#pk">{{programma.program_type}}</a></button>
+                                {% set newArray = newArray|merge([programma.program_type]) %}
+                                {% endif %}
+                           
+                            {% endfor %}
+                        
+                        
+                        
 
-                        {% endfor %}
+                        
                             </div> 
                     </div>  
                 </div>
@@ -27,9 +36,13 @@
                             
             <div class="col-md-12">
                 {% for programma in programmas %}
-                    
-                    <h1><a href="{{urlFor('study', {slug: programma.slug})}}">{{ programma.name }}</a></h1>
-                    
+                    <a href="{{urlFor('study', {slug: programma.slug})}}">
+                        <div class="program-box">
+                            <img src="/assets/{{programma.slug}}.png" alt="{{programma.name}}">
+                            <h3>{{ programma.name }}</h3>
+                            <h5>{{ programma.short_descr}}</h5>
+                        </div>
+                    </a>
                 {% endfor %}
              
             </div>
