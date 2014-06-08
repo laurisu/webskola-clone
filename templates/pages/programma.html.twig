@@ -15,12 +15,7 @@
                         <div class="yeah">
                             <br>
                             <h1>{{ programma.name }}</h1>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default"><a href="#pk">Profesionālā kvalifikācija</a></button>
-                                <button type="button" class="btn btn-default"><a href="#d">Datorgrafika</a></button>
-                                <button type="button" class="btn btn-default"><a href="#dui">Dizains un ilustrācija</a></button>
-                                <button type="button" class="btn btn-default"><a href="#p">Programmēšana</a></button>
-                            </div> 
+                            <h3>{{ programma.short_descr }}</h3>
                         </div>  
                 </div>
             </div>   
@@ -29,13 +24,11 @@
          
             <div class="col-md-12">
                 
-                <p id="pk">
-                {{ programma.short_descr }}</p>
-                <p id="d">
-               {{ programma.long_descr }}</p>
-                <p id="dui">
-               {{ programma.short_descr }}</p>
-                <p id="p">
+                <p>
+                {{ programma.long_descr }}</p>
+                <p>
+               {{ programma.content }}</p>
+                <p>
                {{ programma.grounding }}</p>
             </div>
 
