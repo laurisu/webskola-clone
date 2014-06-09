@@ -2,20 +2,30 @@
 
 {% block content %}
 
-    <div class="my-home-background"></div>
-    
     <div class="my-home-container">
-
-        <div class="container">
+        
+        <div class="my-home-background"></div>
+        
+        <div class="container-fluid">
+            <div class="row white-block"></div>
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <H1>
-                        Lemācies veidot lieliskas lietas kopā ar mums
-                    </H1>
-                    <div class="">
-                        
+                    <div class="my-main-add">
+                        <H1>
+                            Iemācies veidot 
+                            <strong>lieliskas lietas</strong>
+                            kopā ar mums
+                        </H1>  
+                    </div>
+
+                    <div class="my-main-add-buttons">
+                        <a class="btn my-btn-background-1" href="{{urlFor('textpage', {slug:'par-lapu'})}}">Par skolu</a>
+                        <a class="btn my-btn-background-2" href="{{urlFor('study-list')}}">Programmas</a>
                     </div>
                 </div>
+            </div>
+            <div class="row">
+
             </div>
         </div>
 

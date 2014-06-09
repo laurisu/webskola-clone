@@ -220,205 +220,145 @@ body {
     position: absolute;
     z-index: -5;
     background-image: url(../img/background.jpg);
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    width: 100%;
-    height: 300px;
+
 }
 .my-home-container {
     position: relative;
-    text-align: center
+    text-align: center;
+
+    .white-block {
+        display: block;
+        background-color: #fff;
+        min-height: @main-menu-height;
+        margin-top: -@main-menu-height;
+    }
+    .my-main-add {
+        color: #fff;
+        font-family: @font-family-francois;
+        text-transform: uppercase;
+        text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+        padding-top: 30px;
+
+        > h1 {
+            line-height: 0.9;
+            font-size: 97px;
+        }
+        > h1:first-line {
+            font-size: 89px;
+        }
+        > h1 > strong {
+            display: block;
+            font-weight: normal;
+            font-size: 227px;
+        }
+        > h1 strong:first-line {
+            font-size: 149px;
+        }
+    }
+    .my-main-add-buttons {
+        padding-bottom: 30px;
+        
+        .my-btn-background-1 {background: #88852d;}
+        .my-btn-background-2 {background: #fa951a;}
+        
+        > a {
+            font-family: @font-family-ubuntu;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            border: 2px solid white;
+            padding: 15px 45px;
+            margin: 10px;
+        }
+        > a:hover {
+            background: transparent;
+            text-shadow: 1px 1px rgba(0,0,0,0.5);
+        }
+    }
 }
+
 /* font-face */
 
 @font-face {
-  font-family: entypo web;
-  font-style: normal;
-  font-weight: normal;
-  src: url(../assets/entypo_draugiem.eot);
-  src: url(../assets/entypo_draugiem.eot?iefix) format("embedded-opentype"),
-      url(../assets/entypo_draugiem.ttf) format("truetype"),
-      url(../assets/entypo_draugiem.woff) format("woff"),
-      url(../assets/entypo_draugiem.svg#entypo_draugiem) format("svg"); }
+    font-family: entypo web;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../assets/entypo_draugiem.eot);
+    src: url(../assets/entypo_draugiem.eot?iefix) format("embedded-opentype"),
+        url(../assets/entypo_draugiem.ttf) format("truetype"),
+        url(../assets/entypo_draugiem.woff) format("woff"),
+        url(../assets/entypo_draugiem.svg#entypo_draugiem) format("svg"); }
 @font-face {
-  font-family: noto serif web;
-  font-style: normal;
-  font-weight: normal;
-  src: url(../assets/noto_serif-regular.eot);
-  src: url(../assets/noto_serif-regular.eot?iefix) format("embedded-opentype"),
-      url(../assets/noto_serif-regular.ttf) format("truetype"),
-      url(../assets/noto_serif-regular.woff) format("woff"),
-      url(../assets/noto_serif-regular.svg#noto_serif-regular) format("svg"); }
+    font-family: pt serif web;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../assets/pt_serif-regular.eot);
+    src: url(../assets/pt_serif-regular.eot?iefix) format("embedded-opentype"),
+        url(../assets/pt_serif-regular.ttf) format("truetype"),
+        url(../assets/pt_serif-regular.woff) format("woff"),
+        url(../assets/pt_serif-regular.svg#pt_serif-regular) format("svg"); }
 @font-face {
-  font-family: noto serif web;
-  font-style: normal;
-  font-weight: bold;
-  src: url(../assets/noto_serif-bold.eot);
-  src: url(../assets/noto_serif-bold.eot?iefix) format("embedded-opentype"),
-      url(../assets/noto_serif-bold.ttf) format("truetype"),
-      url(../assets/noto_serif-bold.woff) format("woff"),
-      url(../assets/noto_serif-bold.svg#noto_serif-bold) format("svg"); }
+    font-family: pt serif web;
+    font-style: normal;
+    font-weight: bold;
+    src: url(../assets/pt_serif-bold.eot);
+    src: url(../assets/pt_serif-bold.eot?iefix) format("embedded-opentype"),
+        url(../assets/pt_serif-bold.ttf) format("truetype"),
+        url(../assets/pt_serif-bold.woff) format("woff"),
+        url(../assets/pt_serif-bold.svg#pt_serif-bold) format("svg"); }
 @font-face {
-  font-family: noto serif web;
-  font-style: italic;
-  font-weight: normal;
-  src: url(../assets/noto_serif-italic.eot);
-  src: url(../assets/noto_serif-italic.eot?iefix) format("embedded-opentype"),
-      url(../assets/noto_serif-italic.ttf) format("truetype"),
-      url(../assets/noto_serif-italic.woff) format("woff"),
-      url(../assets/noto_serif-italic.svg#noto_serif-italic) format("svg"); }
+    font-family: pt serif web;
+    font-style: italic;
+    font-weight: normal;
+    src: url(../assets/pt_serif-italic.eot);
+    src: url(../assets/pt_serif-italic.eot?iefix) format("embedded-opentype"),
+        url(../assets/pt_serif-italic.ttf) format("truetype"),
+        url(../assets/pt_serif-italic.woff) format("woff"),
+        url(../assets/pt_serif-italic.svg#pt_serif-italic) format("svg"); }
 @font-face {
-  font-family: noto serif web;
-  font-style: italic;
-  font-weight: bold;
-  src: url(../assets/noto_serif-bolditalic.eot);
-  src: url(../assets/noto_serif-bolditalic.eot?iefix) format("embedded-opentype"),
-      url(../fassets/noto_serif-bolditalic.ttf) format("truetype"),
-      url(../fassets/noto_serif-bolditalic.woff) format("woff"),
-      url(../assets/noto_serif-bolditalic.svg#noto_serif-bolditalic) format("svg"); }
+    font-family: pt serif web;
+    font-style: italic;
+    font-weight: bold;
+    src: url(../assets/pt_serif-bolditalic.eot);
+    src: url(../assets/pt_serif-bolditalic.eot?iefix) format("embedded-opentype"),
+        url(../assets/pt_serif-bolditalic.ttf) format("truetype"),
+        url(../assets/pt_serif-bolditalic.woff) format("woff"),
+        url(../assets/pt_serif-bolditalic.svg#pt_serif-bolditalic) format("svg"); }
 @font-face {
-  font-family: pt serif web;
-  font-style: normal;
-  font-weight: normal;
-  src: url(../assets/pt_serif-regular.eot);
-  src: url(../assets/pt_serif-regular.eot?iefix) format("embedded-opentype"),
-      url(../assets/pt_serif-regular.ttf) format("truetype"),
-      url(../assets/pt_serif-regular.woff) format("woff"),
-      url(../assets/pt_serif-regular.svg#pt_serif-regular) format("svg"); }
+    font-family: ubuntu condensed web;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../assets/ubuntu_condensed-regular.eot);
+    src: url(../assets/ubuntu_condensed-regular.eot?iefix) format("embedded-opentype"),
+        url(../assets/ubuntu_condensed-regular.ttf) format("truetype"),
+        url(../assets/ubuntu_condensed-regular.woff) format("woff"),
+        url(../assets/ubuntu_condensed-regular.svg#ubuntu_condensed-regular) format("svg"); }
 @font-face {
-  font-family: pt serif web;
-  font-style: normal;
-  font-weight: bold;
-  src: url(../assets/pt_serif-bold.eot);
-  src: url(../assets/pt_serif-bold.eot?iefix) format("embedded-opentype"),
-      url(../assets/pt_serif-bold.ttf) format("truetype"),
-      url(../assets/pt_serif-bold.woff) format("woff"),
-      url(../assets/pt_serif-bold.svg#pt_serif-bold) format("svg"); }
+    font-family: exo web;
+    font-style: normal;
+    font-weight: 100;
+    src: url(../assets/exo2-thin.eot);
+    src: url(../assets/exo2-thin.eot?iefix) format("embedded-opentype"),
+        url(../assets/exo2-thin.ttf) format("truetype"),
+        url(../assets/exo2-thin.woff) format("woff"),
+        url(../assets/exo2-thin.svg#exo2-thin) format("svg"); }
 @font-face {
-  font-family: pt serif web;
-  font-style: italic;
-  font-weight: normal;
-  src: url(../assets/pt_serif-italic.eot);
-  src: url(../assets/pt_serif-italic.eot?iefix) format("embedded-opentype"),
-      url(../assets/pt_serif-italic.ttf) format("truetype"),
-      url(../assets/pt_serif-italic.woff) format("woff"),
-      url(../assets/pt_serif-italic.svg#pt_serif-italic) format("svg"); }
-@font-face {
-  font-family: pt serif web;
-  font-style: italic;
-  font-weight: bold;
-  src: url(../assets/pt_serif-bolditalic.eot);
-  src: url(../assets/pt_serif-bolditalic.eot?iefix) format("embedded-opentype"),
-      url(../assets/pt_serif-bolditalic.ttf) format("truetype"),
-      url(../assets/pt_serif-bolditalic.woff) format("woff"),
-      url(../assets/pt_serif-bolditalic.svg#pt_serif-bolditalic) format("svg"); }
-@font-face {
-  font-family: ubuntu web;
-  font-style: normal;
-  font-weight: normal;
-  src: url(../assets/ubuntu-regular.eot);
-  src: url(../assets/ubuntu-regular.eot?iefix) format("embedded-opentype"),
-      url(../assets/ubuntu-regular.ttf) format("truetype"),
-      url(../assets/ubuntu-regular.woff) format("woff"),
-      url(../assets/ubuntu-regular.svg#ubuntu-regular) format("svg"); }
-@font-face {
-  font-family: ubuntu web;
-  font-style: normal;
-  font-weight: bold;
-  src: url(../assets/ubuntu-bold.eot);
-  src: url(../assets/ubuntu-bold.eot?iefix) format("embedded-opentype"),
-      url(../assets/ubuntu-bold.ttf) format("truetype"),
-      url(../assets/ubuntu-bold.woff) format("woff"),
-      url(../assets/ubuntu-bold.svg#ubuntu-bold) format("svg"); }
-@font-face {
-  font-family: ubuntu web;
-  font-style: italic;
-  font-weight: normal;
-  src: url(../assets/ubuntu-italic.eot);
-  src: url(../assets/ubuntu-italic.eot?iefix) format("embedded-opentype"),
-      url(../fonts/ubuntu-italic/ubuntu-italic.ttf) format("truetype"),
-      url(../fonts/ubuntu-italic/ubuntu-italic.woff) format("woff"),
-      url(../fonts/ubuntu-italic/ubuntu-italic.svg#ubuntu-italic) format("svg"); }
-@font-face {
-  font-family: ubuntu web;
-  font-style: italic;
-  font-weight: bold;
-  src: url(../assets/ubuntu-bolditalic.eot);
-  src: url(../assets/ubuntu-bolditalic.eot?iefix) format("embedded-opentype"),
-      url(../assets/ubuntu-bolditalic.ttf) format("truetype"),
-      url(../assets/ubuntu-bolditalic.woff) format("woff"),
-      url(../assets/ubuntu-bolditalic.svg#ubuntu-bolditalic) format("svg"); }
-@font-face {
-  font-family: ubuntu web;
-  font-style: normal;
-  font-weight: 100;
-  src: url(../assets/ubuntu-light.eot);
-  src: url(../assets/ubuntu-light.eot?iefix) format("embedded-opentype"),
-      url(../assets/ubuntu-light.ttf) format("truetype"),
-      url(../assets/ubuntu-light.woff) format("woff"),
-      url(../assets/ubuntu-light.svg#ubuntu-light) format("svg"); }
-@font-face {
-  font-family: ubuntu web;
-  font-style: italic;
-  font-weight: 100;
-  src: url(../assets/ubuntu-lightitalic.eot);
-  src: url(../assets/ubuntu-lightitalic.eot?iefix) format("embedded-opentype"),
-      url(../assets/ubuntu-lightitalic.ttf) format("truetype"),
-      url(../assets/ubuntu-lightitalic.woff) format("woff"),
-      url(../assets/ubuntu-lightitalic.svg#ubuntu-lightitalic) format("svg"); }
-@font-face {
-  font-family: ubuntu web;
-  font-style: normal;
-  font-weight: 500;
-  src: url(../assets/ubuntu-medium.eot);
-  src: url(../assets/ubuntu-medium.eot?iefix) format("embedded-opentype"),
-      url(../assets/ubuntu-medium.ttf) format("truetype"),
-      url(../assets/ubuntu-medium.woff) format("woff"),
-      url(../assets/ubuntu-medium.svg#ubuntu-medium) format("svg"); }
-@font-face {
-  font-family: ubuntu web;
-  font-style: italic;
-  font-weight: 500;
-  src: url(../assets/ubuntu-mediumitalic.eot);
-  src: url(../assets/ubuntu-mediumitalic.eot?iefix) format("embedded-opentype"),
-      url(../assets/ubuntu-mediumitalic.ttf) format("truetype"),
-      url(../assets/ubuntu-mediumitalic.woff) format("woff"),
-      url(../assets/ubuntu-mediumitalic.svg#ubuntu-mediumitalic) format("svg"); }
-@font-face {
-  font-family: ubuntu condensed web;
-  font-style: normal;
-  font-weight: normal;
-  src: url(../assets/ubuntu_condensed-regular.eot);
-  src: url(../assets/ubuntu_condensed-regular.eot?iefix) format("embedded-opentype"),
-      url(../assets/ubuntu_condensed-regular.ttf) format("truetype"),
-      url(../assets/ubuntu_condensed-regular.woff) format("woff"),
-      url(../assets/ubuntu_condensed-regular.svg#ubuntu_condensed-regular) format("svg"); }
-@font-face {
-  font-family: exo web;
-  font-style: normal;
-  font-weight: 100;
-  src: url(../assets/exo2-thin.eot);
-  src: url(../assets/exo2-thin.eot?iefix) format("embedded-opentype"),
-      url(../assets/exo2-thin.ttf) format("truetype"),
-      url(../assets/exo2-thin.woff) format("woff"),
-      url(../assets/exo2-thin.svg#exo2-thin) format("svg"); }
-@font-face {
-  font-family: francois one;
-  font-style: normal;
-  font-weight: normal;
-  src: url(../assets/francoisone.eot);
-  src: url(../assets/francoisone.eot?iefix) format("embedded-opentype"), 
-      url(../assets/francoisone.ttf) format("truetype"), 
-      url(../assets/francoisone.woff) format("woff"), 
-      url(../assets/francoisone.svg#francoisone) format("svg"); }
-@font-face {
-  font-family: scada;
-  font-style: normal;
-  font-weight: bold;
-  src: url(../assets/scada-bold.eot);
-  src: url(../assets/scada-bold.eot?iefix) format("embedded-opentype"), 
-      url(../assets/scada-bold.ttf) format("truetype"), 
-      url(../assets/scada-bold.woff) format("woff"), 
-      url(../assets/scada-bold.svg#scada-bold) format("svg"); }
+    font-family: scada;
+    font-style: normal;
+    font-weight: bold;
+    src: url(../assets/scada-bold.eot);
+    src: url(../assets/scada-bold.eot?iefix) format("embedded-opentype"), 
+        url(../assets/scada-bold.ttf) format("truetype"), 
+        url(../assets/scada-bold.woff) format("woff"), 
+        url(../assets/scada-bold.svg#scada-bold) format("svg"); }
