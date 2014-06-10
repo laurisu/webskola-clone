@@ -21,12 +21,12 @@ $(function() {
   });
 });
 
-/* fiicha lai attels butu kustigs */
+/* jQuery image panning via http://www.stumbleupon.com/su/1x3nZg */
 $(window).load(function() {
     $outer_container=$("#outer_container");
     $imagePan_panning=$("#imagePan .panning");
     $imagePan=$("#imagePan");
-    $imagePan_container=$("#imagePan .container");
+    $imagePan_container=$("#imagePan .panning-container");
  
     $imagePan_panning.css("margin-top",($imagePan.height()-$imagePan_panning.height())/2+"px");
     containerWidth=$imagePan.width();
@@ -48,8 +48,8 @@ $(window).load(function() {
         var thePosD=destY-mouseCoordsY;
         var marginL=$imagePan_panning.css("marginLeft").replace("px", "");
         var marginT=$imagePan_panning.css("marginTop").replace("px", "");
-        var animSpeed=1000; //ease amount
-        var easeType="easeOutCirc";
+        var animSpeed=7500; //ease amount
+        var easeType="easeOutSine";
         if(mouseCoordsX>destX || mouseCoordsY>destY){
             //$imagePan_container.css("left",-thePosA-marginL); $imagePan_container.css("top",-thePosC-marginT); //without easing
             $imagePan_container.stop().animate({left: -thePosA-marginL, top: -thePosC-marginT}, animSpeed,easeType); //with easing
