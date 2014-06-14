@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block main_menu %}
+{% endblock %}
+
+{% block content %}
+    {% for blog in blogs %}
+        <h2><a href="{{ urlFor('blog-post', {slug: blog.slug}) }}">{{ blog.title }}</a></h2>
+    {% endfor %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

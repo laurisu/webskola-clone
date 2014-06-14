@@ -22,10 +22,10 @@ $view->parserExtensions = array(
 // ROUTES
 $app->get('/', function () use ($app) {
     require_once '../controller/HomeController.php';
-    
+
     $homePageController = new HomeControler();
     $homePage = $homePageController->landingPageAction();
-    
+
     $app->render('pages/index.html.twig', array(
         'blogs' => $homePage,
         'active' => 'home'
@@ -97,7 +97,6 @@ $app->get('/study/:slug', function ($slug) use ($app) {
     ));
 })->name('study');
 
-
 $app->get('/study/', function () use ($app) {
     require_once '../controller/ProgrammasController.php';
     $programmasController = new ProgrammasController();
@@ -108,5 +107,46 @@ $app->get('/study/', function () use ($app) {
         'active' => 'study-list'
     ));
 })->name('study-list');
+
+/*
+ * ADMIN PANEL
+ */
+$app->get('/admin', function () use ($app) {    
+    $app->render('admin/adminPanel.html.twig');
+})->name('admin-panel');
+
+$app->get('/admin/blog', function () use ($app) {  
+    require_once '../controller/BlogController.php';
+    
+    $blogController = new BlogControler();
+    $blogs = $blogController->adminListAction();
+    
+    $app->render('admin/blog/list.html.twig', array(
+        'blogs' => $blogs
+    ));
+})->name('admin-blog-list');
+
+$app->get('/admin/blog/add', function () use ($app) {  
+    $app->render('admin/blog/add.html.twig', array(
+
+        ));
+})->name('admin-blog-add');
+
+$app->post('/admin/blog/add', function () use ($app){
+    require_once '../controller/BlogController.php';
+    
+    $allPostData = $app->request->post();
+    
+    $blogController = new BlogControler();
+    $succes = $blogController->adminAddAction($allPostData);
+    
+    if ($succes) {
+        $app->redirect($app->urlFor('admin-blog-list'));
+    } else {
+        $app->redirect($app->urlFor('admin-blog-add'));
+    }
+    
+//    $app->redirect($app->urlFor('product_list'));
+});
 
 $app->run();
