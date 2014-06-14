@@ -16,3 +16,5 @@ CREATE TABLE IF NOT EXISTS `programmas` (
   `dates` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+ALTER TABLE `programmas` ADD `slug` VARCHAR(50) NULL , ADD UNIQUE (`slug`) ;
