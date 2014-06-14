@@ -1,1 +1,59 @@
-{# empty Twig template #}
+{% extends "base.html.twig" %}
+
+{% block main_menu %}
+{% endblock %}
+
+{% block content %}
+    
+    <div class="container">
+        <div class="col-lg-8">
+            <form class="form-horizontal" role="form" action="{{ urlFor('admin-blog-update', {id:blog.id}) }}" method="post">
+                <div class="form-group">
+                    <label for="AddProdName" class="col-lg-4 control-label">Author</label>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" name="author" id="AddProdName" value="{{ blog.author }}" placeholder="Author name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="AddSlug" class="col-lg-4 control-label">Slug</label>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" name="slug" id="AddSlug" value="{{ blog.slug }}" placeholder="Enter slug">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="AddTitle" class="col-lg-4 control-label">Title</label>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" name="blog-title" id="AddTitle" value="{{ blog.title }}" placeholder="Enter post title">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="AddDescription" class="col-lg-4 control-label">Description</label>
+                    <div class="col-lg-8">
+                        <textarea class="form-control" name="description" id="AddDescription" placeholder="Enter description">{{ blog.description }}</textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="AddContent" class="col-lg-4 control-label">Content</label>
+                    <div class="col-lg-8">
+                        <textarea class="form-control" name="content" id="AddContent" placeholder="Enter content">{{ blog.content }}</textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="AddDate" class="col-lg-4 control-label">Created</label>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" name="created" id="AddDate" value="{{ blog.created }}"placeholder="Enter date">
+                    </div>
+                </div>
+               
+                <div class="col-lg-offset-4 col-lg-4">
+                    <button type="submit" class="btn btn-success">Edit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
