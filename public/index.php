@@ -21,8 +21,13 @@ $view->parserExtensions = array(
 
 // ROUTES
 $app->get('/', function () use ($app) {
-
+    require_once '../controller/HomeController.php';
+    
+    $homePageController = new HomeControler();
+    $homePage = $homePageController->landingPageAction();
+    
     $app->render('pages/index.html.twig', array(
+        'blogs' => $homePage,
         'active' => 'home'
     ));
 })->name('home');

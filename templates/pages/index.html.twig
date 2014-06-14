@@ -3,9 +3,9 @@
 {% block content %}
 
     <div class="my-home-container">
-        
+
         <div class="my-home-background"></div>
-        
+
         <div class="container-fluid">
             <div class="row white-block"></div>
             <div class="row">
@@ -24,11 +24,25 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-
+        </div>
+                    
+        <div class="row">
+            <div class="col-md-12">
+                <div class="programma-type-container">
+                    <p class="programma-type">Notikumi</p>
+                </div>
+                {% for blog in blogs %}
+                    <a href="{{urlFor('blog-post', {slug: blog.slug})}}">
+                        <div class="program-box">
+                            <img src="/assets/{{blog.slug}}.png" alt="{{blog.title}}">
+                            <h3>{{ blog.title }}</h3>
+                            <h5>{{ blog.description }}</h5>
+                        </div>
+                    </a>
+                {% endfor %}
             </div>
         </div>
-
+            
     </div>
 
 {% endblock %}
