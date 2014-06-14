@@ -21,8 +21,7 @@ body {
         color: @main-menu-font-color;
         padding-top: 0;
     }
-    font-family: @font-family-ubuntu;
-    font-size: @main-menu-font-size;
+    font-msize: @main-menu-font-size;
 
     .my-logo {
         background: url(../img/webskola_logo.svg) no-repeat center;
@@ -33,6 +32,9 @@ body {
         padding-left:  20px;
         padding-right: 20px;
         padding-bottom: 5px;
+        &:hover {
+            color:#bfb83f;
+        }
     }
     .navbar-nav {
         > .active > a {
@@ -58,6 +60,10 @@ body {
     width:100%;
 }
 
+.no-decoration, a:link, a:visited {
+    text-decoration: none;
+}
+
 /* MOVING IMG */
 #outer_container, #imagePan {
     height: 414px;
@@ -77,7 +83,17 @@ body {
     left: 0;
 }
 
-.yeah {
+#imagePan::after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: url(../assets/simple_dashed.png);
+}
+
+.imagePan-menu {
     z-index:1000;
     position:absolute;
     top:0;
@@ -98,6 +114,36 @@ body {
         font-weight: normal;
         font-family: Noto Serif, serif;
         text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    }
+    .my-program-btn-group {
+        margin: 25px 0 0;
+        position: relative;
+        z-index: 10;
+    }
+    .my-program-button {
+        border: 1px solid #fff;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: all 0.5s;
+        padding: 22px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        a {
+            .no-decoration;
+            
+            font-family: @font-family-ubuntu, sans-serif;
+            font-weight: 100;
+            font-size: 16px;
+            color: #666;
+            
+        }
+        &:hover {
+            a {
+                color: #fff;
+            }
+            .no-decoration;
+            background: transparent;
+            text-shadow: 0 1px 2px rgba(0,0,0,0);
+            }   
     }
 }
 
@@ -120,7 +166,7 @@ body {
     h3 {
         font-family: @font-family-ubuntu, sans-serif;
         font-size: 20px;
-        font-weight: 500;
+        font-weight: 700;
         color: #43402c;
     }
     h5 {
@@ -133,6 +179,29 @@ body {
         background: #f1f1e8;
     }
 }
+.programma-type-container {
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    line-height: 1;
+    display:block;
+    margin:20px 0;
+    .programma-type {
+        font-family: @font-family-ubuntu, sans-serif;
+        font-weight: 100;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #a0a0a0;
+        display: inline-block;
+        background-color: white;
+        position: relative;
+        bottom: -5px;
+        padding: 0 10px;
+        margin: 0;
+        line-height: 1.5;
+    }
+}
+
 
 /* ========== FOOTER ========== */
 
@@ -144,7 +213,7 @@ body {
 }
 .my-social-links {
     text-align: center;
-
+    margin-top:10px;
     .nav-pills {
         display: inline-block;
 

@@ -11,14 +11,14 @@
                     <div class="panning-container">
                         <div><img src="/img/programmas_background.jpg" class="panning"></div>
                     </div>
-                    <div class="yeah">
+                    <div class="imagePan-menu">
                         <br>
                         <h1>Programmas</h1>
-                        <div class="btn-group">
+                        <div class="btn-group my-program-btn-group">
                             {% set newArray = [] %}
                             {% for programma in programmas %}
                                 {% if programma.program_type not in newArray %}
-                                    <button type="button" class="btn btn-default"><a href="#pk">{{programma.program_type}}</a></button>
+                                    <button type="button" class="btn btn-default my-program-button"><a href="#{{programma.program_type}}">{{programma.program_type}}</a></button>
                                 {% set newArray = newArray|merge([programma.program_type]) %}
                                 {% endif %}                          
                             {% endfor %}        
@@ -30,7 +30,9 @@
             <div class="my-wrapper">                
                 <div class="col-md-12">
                     {% for x in newArray %}
-                        <p>---------- {{x}} ----------</p>
+                        <div class="programma-type-container">
+                            <p class="programma-type" id="{{x}}">{{x}}</p>
+                        </div>
                         {% for programma in programmas %}
                             {% if x == programma.program_type %}
                                 <a href="{{urlFor('study', {slug: programma.slug})}}">
