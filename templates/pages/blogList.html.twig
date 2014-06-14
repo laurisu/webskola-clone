@@ -1,6 +1,20 @@
 {% extends "base.html.twig" %}
 
 {% block content %}
+    
+            <div id="outer_container" class="my-header">
+                <div id="imagePan">
+                    <div class="panning-container">
+                        <div><img src="/img/bg_blogs.jpg" class="panning"></div>
+                    </div>
+                        <div class="imagePan-menu">
+                            <br>
+                            <h1>Blogs</h1>
+                        </div>  
+                </div>
+            </div>   
+    
+    
     {% for blog in blogs %}
         <h2><a href="{{ urlFor('blog-post', {slug: blog.slug}) }}">{{ blog.title }}</a></h2>
     {% endfor %}
