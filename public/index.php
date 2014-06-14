@@ -8,7 +8,7 @@ $app = new \Slim\Slim(array(
     'debug' => true,
     'view' => new \Slim\Views\Twig(),
     'templates.path' => '../templates',
-));
+        ));
 
 // TWIG
 $view = $app->view();
@@ -21,9 +21,9 @@ $view->parserExtensions = array(
 
 // ROUTES
 $app->get('/', function () use ($app) {
-    
+
     $app->render('pages/index.html.twig', array(
-        'active'=>'home'
+        'active' => 'home'
     ));
 })->name('home');
 
@@ -32,27 +32,33 @@ $app->get('/', function () use ($app) {
  */
 $app->get('/info/:slug', function ($slug) use ($app) {
     require_once '../controller/TextPageController.php';
-    
+
     $textPageController = new TextPageController();
     $textPage = $textPageController->indexAction($slug);
 //    var_dump($textPage);
-    
-        $app->render('pages/textpage.html.twig', array(
-            'text_page' => $textPage,
-            'active' => 'textpage'
+
+    $active = 'textpage_';
+
+    if ($textPage) {
+        $active .= $textPage->getId();
+    }
+
+    $app->render('pages/textpage.html.twig', array(
+        'text_page' => $textPage,
+        'active' => $active
     ));
 })->name('textpage');
 
-/* 
+/*
  * BLOG
  */
 $app->get('/blog', function() use ($app) {
     require_once '../controller/BlogController.php';
-    
+
     $blogControler = new BlogControler();
     $blogs = $blogControler->listAction();
-    
-    
+
+
     $app->render('pages/blogList.html.twig', array(
         'blogs' => $blogs,
         'active' => 'blog'
@@ -61,25 +67,25 @@ $app->get('/blog', function() use ($app) {
 
 $app->get('/blog/:slug', function($slug) use ($app) {
     require_once '../controller/BlogController.php';
-    
+
     $blogControler = new BlogControler();
     $blogs = $blogControler->indexAction($slug);
-    
-    
+
+
     $app->render('pages/blogList.html.twig', array(
         'blogs' => $blogs,
         'active' => 'blog'
     ));
 })->name('blog-post');
 
-/* 
+/*
  * PROGRAMMAS
  */
 $app->get('/study/:slug', function ($slug) use ($app) {
     require_once '../controller/ProgrammasController.php';
     $programmasController = new ProgrammasController();
     $programma = $programmasController->indexAction($slug);
-    
+
     $app->render('pages/programma.html.twig', array(
         'programma' => $programma,
         'active' => 'study'
@@ -91,7 +97,7 @@ $app->get('/study/', function () use ($app) {
     require_once '../controller/ProgrammasController.php';
     $programmasController = new ProgrammasController();
     $programmas = $programmasController->listAction();
-    
+
     $app->render('pages/programmas.html.twig', array(
         'programmas' => $programmas,
         'active' => 'study-list'
