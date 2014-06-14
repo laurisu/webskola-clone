@@ -24,25 +24,28 @@
                     </div>
                 </div>
             </div>
-        </div>
-                    
-        <div class="row">
-            <div class="col-md-12">
-                <div class="programma-type-container">
-                    <p class="programma-type">Notikumi</p>
+
+            <div class="row my-events-bg">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="programma-type-container my-events-header">
+                        <p class="programma-type">Notikumi</p>
+                    </div>
+                    {% for blog in blogs %}
+                        <a href="{{urlFor('blog-post', {slug: blog.slug})}}">
+                            <div class="latest-blog-post-box">
+{#                                <time datetime="YYYY-MM-DD">{{ blog.created }}</time>#}
+                                <img src="/img/post-img/{{blog.slug}}" alt="{{blog.title}}">
+                                <h3>{{ blog.title }}</h3>
+                                <h5>{{ blog.description }}</h5>
+                            </div>
+                        </a>
+                    {% endfor %}
                 </div>
-                {% for blog in blogs %}
-                    <a href="{{urlFor('blog-post', {slug: blog.slug})}}">
-                        <div class="program-box">
-                            <img src="/assets/{{blog.slug}}.png" alt="{{blog.title}}">
-                            <h3>{{ blog.title }}</h3>
-                            <h5>{{ blog.description }}</h5>
-                        </div>
-                    </a>
-                {% endfor %}
             </div>
         </div>
-            
+
+
+
     </div>
 
 {% endblock %}
