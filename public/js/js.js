@@ -19,6 +19,17 @@ $(function() {
       }
     }
   });
+  
+/* ==== WYSIWYG EDITOR ==== */
+    tinymce.init({
+        theme_url: '/plugins/tinymce/theme.min.js',
+        skin_url: '/plugins/tinymce/lightgray',
+        selector:'.tinymce-editor',
+        menubar : false,
+        statusbar : false
+        
+    });  
+  
 });
 
 /* jQuery image panning via http://www.stumbleupon.com/su/1x3nZg */
