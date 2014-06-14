@@ -149,4 +149,30 @@ $app->post('/admin/blog/add', function () use ($app){
 //    $app->redirect($app->urlFor('product_list'));
 });
 
+$app->get('/admin/blog/edit/:id', function ($id) use ($app) {  
+    require_once '../controller/BlogController.php';
+    
+    $blogController = new BlogControler();
+    $blog = $blogController->adminEditAction($id);
+    
+    $app->render('admin/blog/edit.html.twig', array(
+        'blog' => $blog
+        ));
+})->name('admin-blog-edit');
+
+$app->post('/admin/blog/edit/:id', function ($id) use ($app){
+    require_once '../controller/BlogController.php';
+    
+    $allPostData = $app->request->post();
+    
+    $blogController = new BlogControler();
+    $succes = $blogController->adminUpdateAction($id, $allPostData);
+    
+    if ($succes) {
+        $app->redirect($app->urlFor('admin-blog-edit', array('id' => $id)));
+    } else {
+        $app->redirect($app->urlFor('admin-blog-update', array('id' => $id)));
+    }
+})->name('admin-blog-update');
+
 $app->run();
