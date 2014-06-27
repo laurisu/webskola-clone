@@ -3,19 +3,26 @@
 {% block pageTitle %}{{ text_page.title }}{% endblock %}
 
 {% block content %}
-    
-            <div id="outer_container" class="my-header">
-                <div id="imagePan">
-                    <div class="panning-container">
-                        <div><img src="/img/bg_blogs.jpg" class="panning"></div>
-                    </div>
-                        <div class="imagePan-menu">
-                            <br>
-                            <h1>{{ text_page.title }}</h1>
-                            
-                        </div>  
-                </div>
-            </div>   
-                        
+
+    <div id="outer_container" class="my-header">
+        <div id="imagePan">
+            <div class="panning-container">
+                <div><img src="/img/bg_blogs.jpg" class="panning"></div>
+            </div>
+            <div class="imagePan-menu">
+                <br>
+                <h1>{{ text_page.title }}</h1>
+                {#                {% if text_page.short_description is not null %}
+                                    <div class="pagesubtitle">
+                                        <p>
+                                            {{ text_page.short_description | raw }}
+                                        </p>
+                                    </div>
+                                {% endif %}#}
+            </div>  
+        </div>
+    </div>   
+
+
     {{ text_page.content | raw }}
 {% endblock %}
