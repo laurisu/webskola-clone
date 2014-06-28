@@ -8,4 +8,9 @@ class TextPage extends Model
         return $this->id;
     }
     
+    public function getShortDescription() {
+        
+        return $this->short_description;
+    }
+    
 }
