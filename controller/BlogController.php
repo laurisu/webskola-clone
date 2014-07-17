@@ -14,7 +14,7 @@ class BlogControler {
     }
 
     public function indexAction($slug) {
-        $blogs = $this->getFactory()->where('slug', $slug)->find_one();
+        $blogs = $this->getFactory()->where('slug', $slug)->find_many();
 
         return $blogs;
     }

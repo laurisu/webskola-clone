@@ -77,7 +77,7 @@ $app->get('/blog/:slug', function($slug) use ($app) {
     $blogs = $blogControler->indexAction($slug);
 
 
-    $app->render('pages/blogList.html.twig', array(
+    $app->render('pages/slug.html.twig', array(
         'blogs' => $blogs,
         'active' => 'blog'
     ));
